@@ -2,6 +2,7 @@ package com.vuabocphet.materialdesignp2kt
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -39,10 +40,12 @@ class MyAdapter(var students:ArrayList<Student>,var context:Context): RecyclerVi
 
         holder.tvName.setOnClickListener(View.OnClickListener {
 
-            students.removeAt(i)
+            students.remove(students.get(i))
+            Log.e("SIZE",students.size.toString()+"-i:"+i)
 
-            notifyItemRemoved(i);
+             notifyDataSetChanged()
         })
 
     }
 }
+
