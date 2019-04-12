@@ -132,7 +132,7 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
 
     fun toast(text:String){
 
-        Toast.makeText(this,text,Toast.LENGTH_LONG)
+        Toast.makeText(this,text,Toast.LENGTH_LONG).show()
     }
 
 
